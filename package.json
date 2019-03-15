@@ -1,0 +1,50 @@
+{
+  "name": "vue-grapesjs",
+  "version": "0.0.7",
+  "private": false,
+  "main": "dist/vue-grapesjs.common.js",
+  "files": [
+    "dist/*",
+    "*.md"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "lint": "vue-cli-service lint",
+    "prepublish": "npm run lint && npm run compile",
+    "build:demo": "vue-cli-service build --dest=demo",
+    "build:lib": "vue-cli-service build --target lib --name vue-grapesjs src/components/grapesjs/index.js",
+    "compile": "npm run build:lib && npm run build:demo",
+    "deploy": "git push",
+    "publish": "npm publish"
+  },
+  "dependencies": {
+    "grapesjs": "^0.14.55",
+    "vue": "^2.6.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magr0s/vue-grapesjs.git"
+  },
+  "author": "magr0s <magr0s.ak@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magr0s/vue-grapesjs/issues"
+  },
+  "homepage": "https://github.com/magr0s/vue-grapesjs#readme",
+  "keywords": [
+    "vue-grapesjs",
+    "vue",
+    "vue.js",
+    "plugin"
+  ]
+}
