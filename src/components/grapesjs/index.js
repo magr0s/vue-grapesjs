@@ -1,5 +1,4 @@
 import grapesjs from 'grapesjs'
-import GrapesjsEditor from './editor.vue'
 
 const VueGrapesjs = {
   install (Vue, options = {}) {
@@ -24,8 +23,6 @@ const VueGrapesjs = {
     }
 
     Vue.prototype.$grapesjs = grapesjs
-
-    Vue.component(GrapesjsEditor.name, GrapesjsEditor)
   }
 }
 
