@@ -13,12 +13,12 @@ const VueGrapesjs = {
       presets.forEach((data) => {
         const {
           name,
-          options,
-          script
+          options = {},
+          loader
         } = data
 
         grapesjs.plugins.add(name, (editor) => {
-          script(editor, options)
+          loader(editor, options)
         })
       })
     }
